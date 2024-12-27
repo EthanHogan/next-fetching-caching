@@ -25,7 +25,10 @@ export default async function ServerWithDataPage() {
       </ul>
 
       <div className="rounded-lg border border-slate-700 p-5">
-        <h2 className="text-2xl">'Posts' fetched on server:</h2>
+        <h2 className="text-2xl">
+          'Posts' fetched on server at{" "}
+          <span className="font-bold">build time</span>:
+        </h2>
         <ul className="list-inside list-disc pl-5">
           {posts.map((post) => (
             <li key={post.id}>{post.content}</li>
