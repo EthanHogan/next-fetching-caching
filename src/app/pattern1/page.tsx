@@ -1,5 +1,3 @@
-import getTime from "~/actions/types/getTime";
-
 export default function Pattern1Page() {
   const renderedTime = new Date().toLocaleString();
   return (

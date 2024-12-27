@@ -30,8 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
         > */}
         <TopNav />
-        {children}
-        {/* <TanstackProvider>{children}</TanstackProvider> */}
+        <TanstackProvider>{children}</TanstackProvider>
         {/* </ThemeProvider> */}
       </body>
     </html>

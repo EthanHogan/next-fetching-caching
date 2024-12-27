@@ -1,6 +1,3 @@
-import Link from "next/link";
-import PatternsList from "~/components/PatternsList";
-
 export default function HomePage() {
   return (
     <main className="flex flex-col justify-center gap-5 px-5">
