@@ -33,6 +33,16 @@ export default function PatternsList() {
             Regeneration (ISR) invalidated on-demand
           </Link>
         </li>
+
+        <li>
+          <Link
+            href="/pattern4"
+            className="text-primary underline hover:text-blue-500"
+          >
+            Pattern #4 - Static Rendered, With Data, Incremental Static
+            Regeneration (ISR), revalidated on a timer
+          </Link>
+        </li>
         <li>WIP... More patterns to come...</li>
       </ul>
     </div>
