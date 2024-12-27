@@ -17,7 +17,7 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-const tablePrefix = "user-platform";
+const tablePrefix = "next-fetching-caching";
 export const createTable = pgTableCreator((name) => `${tablePrefix}_${name}`);
 
 export const posts = createTable(
@@ -33,9 +33,7 @@ export const posts = createTable(
       () => new Date(),
     ),
   },
-  (example) => ({
-    userId: index("userId_idx").on(example.userId),
-  }),
+  (example) => [index(`${tablePrefix}_userId_idx`).on(example.userId)],
 );
 
 export const postsSelectSchema = createSelectSchema(posts);

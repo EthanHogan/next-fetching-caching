@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ["user-platform_*"],
+  tablesFilter: ["next-fetching-caching_*"],
 } satisfies Config;
