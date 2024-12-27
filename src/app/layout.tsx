@@ -23,15 +23,15 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
-        <TopNav />
-        <TanstackProvider>{children}</TanstackProvider>
-        {/* </ThemeProvider> */}
+        >
+          <TopNav />
+          <TanstackProvider>{children}</TanstackProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
