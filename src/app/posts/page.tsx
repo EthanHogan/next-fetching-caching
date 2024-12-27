@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { unstable_cache } from "next/cache";
 
 import {
@@ -16,7 +15,6 @@ import {
   TableRow,
 } from "~/components/ui/table";
 
-import CreatePostDialog from "./_components/CreatePost";
 import PostsView from "./_components/PostsView";
 import getPosts from "./_actions/getPosts";
 
@@ -28,9 +26,7 @@ export default async function PostsPage() {
           <CardTitle>
             <div className="flex items-center justify-between">
               <div>Posts</div>
-              <div>
-                <CreatePostDialog />
-              </div>
+              <div></div>
             </div>
           </CardTitle>
           <CardDescription>Posts from the database.</CardDescription>
