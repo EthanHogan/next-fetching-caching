@@ -1,5 +1,11 @@
-export default function StaticNoDataPage() {
-  const prerenderedTime = new Date().toLocaleString();
+export default async function StaticNoDataPage() {
+  const prerenderedTime = await (async (): Promise<string> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(new Date().toLocaleString());
+      }, 0);
+    });
+  })();
   return (
     <div className="flex flex-col gap-5">
       <h1 className="text-4xl font-bold">Static - No Data</h1>

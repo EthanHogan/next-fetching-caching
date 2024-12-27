@@ -2,7 +2,13 @@ import getPosts from "~/app/posts/_actions/getPosts";
 
 export default async function StaticWithDataPage() {
   const posts = await getPosts();
-
+  const prerenderedTime = await (async (): Promise<string> => {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(new Date().toLocaleString());
+      }, 0);
+    });
+  })();
   return (
     <div className="flex flex-col gap-5">
       <h1 className="text-4xl font-bold">Static - With Data</h1>
@@ -11,7 +17,7 @@ export default async function StaticWithDataPage() {
         page.
       </p>
 
-      <p>This page was rendered at: {new Date().toLocaleString()}</p>
+      <p>This page was rendered at: {prerenderedTime}</p>
 
       <h2 className="text-2xl">Post data fetched at build time from a DB:</h2>
       <ul className="list-inside list-disc pl-5">
