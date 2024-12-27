@@ -12,21 +12,15 @@ export function TopNav() {
           <div className="flex">
             <div className="flex flex-shrink-0 items-center">
               <Link href="/" className="text-2xl font-bold text-primary">
-                user<span className="text-blue-500">-</span>platform
+                next<span className="text-blue-500">-</span>patterns
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
-                href="/server-rendered/no-data"
+                href="/patterns"
                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
               >
-                Server (No Data)
-              </Link>
-              <Link
-                href="/server-rendered/with-data"
-                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
-              >
-                Server (With Data)
+                Patterns
               </Link>
             </div>
           </div>
