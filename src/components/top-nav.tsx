@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
-
 import { ModeToggle } from "./mode-toggle";
 
 export function TopNav() {
@@ -26,12 +24,6 @@ export function TopNav() {
           </div>
           <div className="flex items-center gap-3">
             <ModeToggle />
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
           </div>
         </div>
       </div>
