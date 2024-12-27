@@ -1,0 +1,18 @@
+Criteria:
+Render method - (Fully server rendered, Fully client rendered, mixed)
+
+Does the page need access to browser apis (cookies, local storage, etc.)
+
+Does the page have data loaded into it from a database/external source when the page loads? (Y,N)
+    N: Pattern(s) - Page can be rendered on build and cached as a static page
+    Y: Do you want to cache the data?
+        Y: Can the data be loaded once per deployment and cached forever? (Y, N)
+            Y: Pattern(s) - Load data on build and cache result in static page that is served forever
+            N: Should the cache be invalidated when the data changes or on an interval? (trigger, interval)
+                Trigger: Pattern (ISR on endpoint trigger)
+                Interval: Pattern (ISR on interval)
+        N: Pattern(s) - data needs to be fresh on each page load
+
+Does the page need to fetch data based on a user interaction?
+    Y: Pattern - 
+
