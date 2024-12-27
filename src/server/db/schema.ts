@@ -24,8 +24,8 @@ export const posts = createTable(
   "post",
   {
     id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
-    userId: varchar("user_id", { length: 256 }).notNull(),
     content: varchar("content", { length: 280 }).notNull(),
+    sequence: integer("sequence").notNull(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),
@@ -33,7 +33,7 @@ export const posts = createTable(
       () => new Date(),
     ),
   },
-  (example) => [index(`${tablePrefix}_userId_idx`).on(example.userId)],
+  (example) => [index(`${tablePrefix}_sequence_idx`).on(example.sequence)],
 );
 
 export const postsSelectSchema = createSelectSchema(posts);
