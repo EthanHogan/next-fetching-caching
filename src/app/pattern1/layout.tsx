@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pattern 1",
+  title: "Pattern #1",
   description: "A server rendered static page with no data fetching.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

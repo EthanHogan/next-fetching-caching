@@ -1,6 +1,6 @@
 import getPosts from "~/app/posts/_actions/getPosts";
 
-export default async function ServerWithDataPage() {
+export default async function Pattern2Page() {
   const posts = await getPosts();
   const renderedTime = new Date().toLocaleString();
   return (
