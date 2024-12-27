@@ -68,16 +68,16 @@ export default async function Pattern4Page() {
       </div>
 
       <p>
-        This page is a rendered at build time on the server and cached for 60
+        This page is rendered at build time on the server and cached for 60
         seconds. The page will be re-rendered on the server on the next request
         after it has been invalidated, and future requests for the page will be
         served the updated page.
       </p>
 
       <p>
-        The data is fetched on the server at build time and used to statically
-        render the page. It is fetched again when the page is requested after it
-        has been invalidated.
+        The data for this page (posts) is fetched on the server at build time
+        and used to statically render the page. It is fetched again when the
+        page is requested after it has been invalidated.
       </p>
 
       <p>
@@ -88,7 +88,7 @@ export default async function Pattern4Page() {
       <p>Refresh the page to see if the render time updates.</p>
 
       <h2 className="text-2xl font-bold">Explanation:</h2>
-      <ol className="list-inside list-decimal pl-5">
+      <ol className="flex list-inside list-decimal flex-col gap-2 pl-5">
         <li>
           This page was static rendered at <RenderTime />
         </li>
