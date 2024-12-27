@@ -17,10 +17,16 @@ export function TopNav() {
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
-                href="/posts"
+                href="/static/no-data"
                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
               >
-                Posts
+                Static (No Data)
+              </Link>
+              <Link
+                href="/static/with-data"
+                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
+              >
+                Static (With Data)
               </Link>
             </div>
           </div>
