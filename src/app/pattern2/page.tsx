@@ -7,11 +7,16 @@ export default async function ServerWithDataPage() {
     <div className="flex flex-col gap-5">
       <h1 className="text-5xl font-bold">Pattern #2</h1>
       <ul className="list-inside list-disc pl-5 text-sm">
-        <li>✅ Fully server rendered</li>
+        <li>✅ Rendered on server</li>
+        <li>✅ Static Rendering - Page rendered at build time and cached</li>
+        <li>✅ Static page cached</li>
         <li>✅ Data fetched</li>
         <li>❌ Data mutations</li>
-        <li>❌ Page cached</li>
-        <li>❌ Data cached</li>
+        <li>
+          ➖ Data cached - Sort of. The 'data' it self is not cached, but the
+          page that renders the data is cached, having the same effect on the
+          user's experience of the page
+        </li>
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
         <li>❌ Suspense</li>
@@ -28,22 +33,22 @@ export default async function ServerWithDataPage() {
         </ul>
       </div>
 
-      <p>This page is fully rendered on the server.</p>
-
       <p>
-        This page will be re-rendered and its data will be refetched on the
-        server each time it is requested because no caching is being done.
+        This page is a rendered at build time on the server and cached
+        indefinitely.
       </p>
 
       <p>
-        The data being fetched is purposely blocked by a 3 second wait. Notice
-        when navigating to this page from another page (by using the top-nav
-        links) that the page takes at least 3 seconds to appear.
+        The data is fetched on the server at build time and used to statically
+        render the page.
       </p>
 
-      <p>This page was rendered at: {renderedTime}</p>
+      <p>
+        This page was rendered at:{" "}
+        <span className="font-bold">{renderedTime}</span>
+      </p>
 
-      <p>Refresh the page to see the time update.</p>
+      <p>Refresh the page to see if the render time updates.</p>
     </div>
   );
 }

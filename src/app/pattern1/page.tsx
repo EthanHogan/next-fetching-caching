@@ -5,11 +5,12 @@ export default function Pattern1Page() {
       <h1 className="text-5xl font-bold">Pattern #1</h1>
 
       <ul className="list-inside list-disc pl-5 text-sm">
-        <li>✅ Fully server rendered</li>
+        <li>✅ Rendered on server</li>
+        <li>✅ Static Rendering - Page rendered at build time and cached</li>
+        <li>✅ Static page cached</li>
         <li>❌ Data fetched</li>
         <li>❌ Data mutations</li>
-        <li>❌ Page cached</li>
-        <li>❌ Data cached</li>
+        <li>➖ Data cached</li>
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
         <li>❌ Suspense</li>
@@ -18,8 +19,8 @@ export default function Pattern1Page() {
       </ul>
 
       <p>
-        This page will be re-rendered on the server each time it is requested.
-        No caching is being done on the rendered page or the data.
+        This page is a rendered at build time on the server and cached
+        indefinitely.
       </p>
 
       <p>
@@ -27,7 +28,7 @@ export default function Pattern1Page() {
         <span className="font-bold">{renderedTime}</span>
       </p>
 
-      <p>Refresh the page to see the time update.</p>
+      <p>Refresh the page to see if the render time updates.</p>
     </div>
   );
 }

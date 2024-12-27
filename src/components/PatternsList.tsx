@@ -10,7 +10,7 @@ export default function PatternsList() {
             href="/pattern1"
             className="text-primary underline hover:text-blue-500"
           >
-            Pattern #1 - Server Rendered, No Data
+            Pattern #1 - Static Rendered, No Data
           </Link>
         </li>
         <li>
@@ -18,7 +18,7 @@ export default function PatternsList() {
             href="/pattern2"
             className="text-primary underline hover:text-blue-500"
           >
-            Pattern #2 - Server Rendered, With Data
+            Pattern #2 - Static Rendered, With Data
           </Link>
         </li>
         <li>WIP... More patterns to come...</li>

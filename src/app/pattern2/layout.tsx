@@ -3,13 +3,13 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Server Rendered - With Data",
+  title: "Pattern 2",
   description:
-    "A fully server rendered, page with data fetching done on the server.",
+    "A server rendered static page with data fetching done on the server at build time.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-export default function ServerRenderedWithDataLayout({
+export default function Pattern2Layout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return <div className="p-2">{children}</div>;
