@@ -2,9 +2,13 @@ import Link from "next/link";
 import getPosts from "~/app/posts/_actions/getPosts";
 import CyclePostsButton from "~/components/CyclePostsButton";
 
-export const dynamic = "force-dynamic";
-
-export default async function DynamicRenderingPage() {
+export default async function DynamicRenderingSearchParamsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  const sParams = await searchParams;
+  console.log(sParams);
   // artificial delay of 3 seconds
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
@@ -15,6 +19,7 @@ export default async function DynamicRenderingPage() {
     <div className="flex flex-col gap-5">
       <div>
         <h1 className="text-5xl font-bold">Dynamic Rendering</h1>
+        <em>Use of search params makes this page dynamic</em>
       </div>
       <ul className="list-inside list-disc pl-5 text-sm">
         <li>✅ Rendered on server</li>
@@ -37,6 +42,11 @@ export default async function DynamicRenderingPage() {
           slow fetch when rendering and to show the `loading.tsx` fallback on
           navigation.
         </p>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold">Search Params</h2>
+        <code>{JSON.stringify(sParams)}</code>
       </div>
 
       <div className="rounded-lg border border-slate-700 p-5">

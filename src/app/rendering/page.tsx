@@ -57,10 +57,10 @@ export default function RenderingPage() {
           <ul className="list-inside list-disc pl-5">
             <li>
               <Link
-                href="/rendering/dynamic-rendering"
+                href="/rendering/dynamic-rendering/force-dynamic"
                 className="text-primary underline hover:text-blue-500"
               >
-                Dynamic Rendering
+                Dynamic Rendering - Force Dynamic
               </Link>
             </li>
             <li>
@@ -69,6 +69,15 @@ export default function RenderingPage() {
                 className="text-primary underline hover:text-blue-500"
               >
                 Dynamic Rendering - No `loading.tsx` (not recommended)
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                href="/rendering/dynamic-rendering/search-params?someArray=1&someArray=2&someArray=3&someKey=someValue"
+                className="text-primary underline hover:text-blue-500"
+              >
+                Dynamic Rendering - Search Params
               </Link>
             </li>
           </ul>
