@@ -9,7 +9,7 @@ export default async function StreamedPosts() {
 
   return (
     <div
-      className="rounded-lg border border-blue-600 bg-blue-900 p-5"
+      className="rounded-lg border border-blue-900 bg-blue-600 p-5 dark:border-blue-600 dark:bg-blue-900"
       style={{ height: "150px" }}
     >
       <h2 className="text-2xl">Posts</h2>

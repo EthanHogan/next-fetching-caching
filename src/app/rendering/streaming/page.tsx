@@ -21,11 +21,11 @@ export default function StreamingPage() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="h-5 w-5 rounded border border-red-600 bg-red-900"></div>
+          <div className="h-5 w-5 rounded border border-red-900 bg-red-600 dark:border-red-600 dark:bg-red-900"></div>
           <div className="text-red-600">Streaming content</div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="h-5 w-5 rounded border border-blue-600 bg-blue-900"></div>
+          <div className="h-5 w-5 rounded border border-blue-900 bg-blue-600 dark:border-blue-600 dark:bg-blue-900"></div>
           <div className="text-blue-600">Streamed content</div>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function StreamingPage() {
 const StreamingFallback = ({ delaySeconds }: { delaySeconds: number }) => {
   return (
     <div
-      className="rounded-lg border border-red-600 bg-red-900 p-5"
+      className="rounded-lg border border-red-900 bg-red-600 p-5 dark:border-red-600 dark:bg-red-900"
       style={{ height: "150px" }}
     >
       <h2 className="text-2xl">Streaming... ({delaySeconds} second delay)</h2>
