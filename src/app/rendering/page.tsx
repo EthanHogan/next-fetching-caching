@@ -84,6 +84,16 @@ export default function RenderingPage() {
         </li>
         <li>
           <h3 className="break-words text-xl font-bold">Streaming</h3>
+          <ul className="list-inside list-disc pl-5">
+            <li>
+              <Link
+                href="/rendering/streaming"
+                className="text-primary underline hover:text-blue-500"
+              >
+                Streaming
+              </Link>
+            </li>
+          </ul>
         </li>
       </ul>
 
