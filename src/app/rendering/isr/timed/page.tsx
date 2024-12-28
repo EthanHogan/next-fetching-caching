@@ -102,7 +102,7 @@ export default async function ISRTimedPage() {
           regardless of any changes to to the post's ordering (triggered by the
           'Cycle Posts' button on{" "}
           <Link
-            href="/rendering/static-rendering/isr/on-demand"
+            href="/rendering/isr/on-demand"
             className="text-primary underline hover:text-blue-500"
           >
             ISR - On Demand
