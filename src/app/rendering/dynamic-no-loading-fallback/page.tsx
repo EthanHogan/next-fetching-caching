@@ -14,7 +14,10 @@ export default async function DynamicRenderingNoLoadingPage() {
     <div className="flex flex-col gap-5">
       <div>
         <h1 className="text-5xl font-bold">Dynamic Rendering</h1>
-        <em>No `loading.tsx` fallback used</em>
+        <em>
+          No `loading.tsx` fallback used{" "}
+          <span className="font-bold">(not recommended)</span>
+        </em>
       </div>
       <ul className="list-inside list-disc pl-5 text-sm">
         <li>✅ Rendered on server</li>
@@ -35,7 +38,8 @@ export default async function DynamicRenderingNoLoadingPage() {
         <p>
           This page has an artificial delay of 3 seconds added to simulate a
           slow fetch when rendering and is purposefully not implemented with a
-          `loading.tsx` to demonstrate the importance of having one.
+          `loading.tsx` to demonstrate the importance of having one if you want
+          to provide a more responsive experience.
         </p>
       </div>
 
