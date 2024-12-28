@@ -7,7 +7,7 @@ import { db } from "~/server/db";
 import { Post, posts } from "~/server/db/schema";
 
 function revalidatePaths() {
-  revalidatePath("/pattern3");
+  revalidatePath("/rendering/isr/on-demand");
 }
 
 export default async function cyclePostsOrder() {
