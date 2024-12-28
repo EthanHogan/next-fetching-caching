@@ -40,15 +40,20 @@ export default function StreamingPage() {
       </div>
 
       <p>
-        The key part of this page is the `unstable_noStore` in the
-        `StreamedPosts` component. Removing this will cause the entire page to
-        become static and you will not see the streaming effect occur on the
-        posts. The rendered time will also not update on each request.
+        The key parts of this page are the Suspense boundaries with their own
+        fallbacks and the `unstable_noStore` in the `StreamedPosts` component.
       </p>
 
       <p>
-        To make the "server rendered" areas of the page static and always have
-        the streamed sections be fresh, see Partial Pre-Rendering (PPR)
+        Removing `unstable_noStore` will cause the entire page to become static
+        and you will not see the streaming effect occur on the posts because the
+        page will be statically generated at build time and cached. The
+        "rendered time" will also not update on each request.
+      </p>
+
+      <p>
+        To make the "Server generated" areas of the page static and always have
+        the streamed sections be fresh, see Partial Pre-Rendering (PPR).
       </p>
     </div>
   );
