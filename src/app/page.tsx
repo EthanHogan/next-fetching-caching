@@ -6,13 +6,6 @@ export default function HomePage() {
           next<span className="text-blue-500">-</span>patterns
         </h1>
       </div>
-
-      <div className="container">
-        <p>
-          WIP: Here will be a questionaire form to help people determine which
-          pattern(s) they should use with examples.
-        </p>
-      </div>
     </main>
   );
 }
