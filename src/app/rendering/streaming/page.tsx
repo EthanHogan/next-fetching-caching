@@ -26,7 +26,9 @@ export default function StreamingPage() {
         </div>
         <div className="flex items-center gap-3">
           <div className="h-5 w-5 rounded border border-blue-900 bg-blue-600 dark:border-blue-600 dark:bg-blue-900"></div>
-          <div className="text-blue-600">Streamed content</div>
+          <div className="text-blue-600">
+            Streamed content that was generated on the server
+          </div>
         </div>
       </div>
 
