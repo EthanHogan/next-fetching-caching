@@ -3,7 +3,7 @@ import getPosts from "~/app/posts/_actions/getPosts";
 
 export const revalidate = 60; // invalidate every minute
 
-export default async function Pattern4Page() {
+export default async function ISRTimedPage() {
   const posts = await getPosts();
   const now = new Date();
   const renderedDateTime = now.toLocaleString();
@@ -22,13 +22,19 @@ export default async function Pattern4Page() {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-5xl font-bold">Pattern #4</h1>
+      <div>
+        <h1 className="text-5xl font-bold">ISR - Timed</h1>
+        <em>Incremental Static Regeneration</em>
+      </div>
+
       <ul className="list-inside list-disc pl-5 text-sm">
         <li>✅ Rendered on server</li>
-        <li>✅ Static Rendering - Page rendered at build time and cached</li>
+        <li>✅ Page rendered at build time and cached</li>
         <li>✅ Static page cached</li>
+        <li>❌ Cached static page is invalidated on-demand</li>
+        <li>✅ Cached static page is invalidated on a timer</li>
         <li>✅ Data fetched</li>
-        <li>❌ Data mutations</li>
+        <li>✅ Data mutations</li>
         <li>
           ➖ Data cached - Sort of. The 'data' it self is not cached, but the
           page that renders the data is cached, having the same effect on the
@@ -37,8 +43,6 @@ export default async function Pattern4Page() {
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
         <li>❌ Suspense</li>
-        <li>✅ Incremental Static Regeneration (ISR): Timer</li>
-        <li>❌ Partial Pre-Rendering (PPR)</li>
       </ul>
 
       <div className="rounded-lg border border-slate-700 p-5">
@@ -96,7 +100,14 @@ export default async function Pattern4Page() {
           Any requests for this page between <RenderTime /> and{" "}
           <ExpirationTime /> will continue to be served this exact page,
           regardless of any changes to to the post's ordering (triggered by the
-          'Cycle Posts' button in Pattern #3) during that time.
+          'Cycle Posts' button on{" "}
+          <Link
+            href="/rendering/static-rendering/isr/on-demand"
+            className="text-primary underline hover:text-blue-500"
+          >
+            ISR - On Demand
+          </Link>
+          ) during that time.
         </li>
         <li>
           The first request for this page after <ExpirationTime /> will trigger

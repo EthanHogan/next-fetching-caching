@@ -1,15 +1,19 @@
 import getPosts from "~/app/posts/_actions/getPosts";
 
-export default async function Pattern2Page() {
+export default async function StaticRenderingWithDataPage() {
   const posts = await getPosts();
   const renderedTime = new Date().toLocaleString();
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-5xl font-bold">Pattern #2</h1>
+      <h1 className="break-words text-5xl font-bold">
+        Static Rendering - With Data
+      </h1>
       <ul className="list-inside list-disc pl-5 text-sm">
         <li>✅ Rendered on server</li>
-        <li>✅ Static Rendering - Page rendered at build time and cached</li>
+        <li>✅ Page rendered at build time and cached</li>
         <li>✅ Static page cached</li>
+        <li>❌ Cached static page is invalidated on-demand</li>
+        <li>❌ Cached static page is invalidated on a timer</li>
         <li>✅ Data fetched</li>
         <li>❌ Data mutations</li>
         <li>
@@ -20,8 +24,6 @@ export default async function Pattern2Page() {
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
         <li>❌ Suspense</li>
-        <li>❌ Incremental Static Regeneration (ISR)</li>
-        <li>❌ Partial Pre-Rendering (PPR)</li>
       </ul>
 
       <div className="rounded-lg border border-slate-700 p-5">

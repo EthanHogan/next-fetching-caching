@@ -1,17 +1,22 @@
 import getPosts from "~/app/posts/_actions/getPosts";
 import CyclePostsButton from "~/components/CyclePostsButton";
 
-export default async function Pattern3Page() {
+export default async function ISROnDemandPage() {
   const posts = await getPosts();
   const renderedTime = new Date().toLocaleString();
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-5xl font-bold">Pattern #3</h1>
+      <div>
+        <h1 className="text-5xl font-bold">ISR - On Demand</h1>
+        <em>Incremental Static Regeneration</em>
+      </div>
       <ul className="list-inside list-disc pl-5 text-sm">
         <li>✅ Rendered on server</li>
-        <li>✅ Static Rendering - Page rendered at build time and cached</li>
+        <li>✅ Page rendered at build time and cached</li>
         <li>✅ Static page cached</li>
+        <li>✅ Cached static page is invalidated on-demand</li>
+        <li>❌ Cached static page is invalidated on a timer</li>
         <li>✅ Data fetched</li>
         <li>✅ Data mutations</li>
         <li>
@@ -22,8 +27,6 @@ export default async function Pattern3Page() {
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
         <li>❌ Suspense</li>
-        <li>✅ Incremental Static Regeneration (ISR): On-Demand</li>
-        <li>❌ Partial Pre-Rendering (PPR)</li>
       </ul>
 
       <div className="rounded-lg border border-slate-700 p-5">

@@ -1,6 +1,6 @@
 "use client";
 
-import cyclePostsOrder from "~/app/pattern3/_actions/cyclePostOrder";
+import cyclePostsOrder from "~/actions/types/cyclePostOrder";
 import { Button } from "./ui/button";
 
 export default function CyclePostsButton() {

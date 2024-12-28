@@ -15,10 +15,10 @@ export function TopNav() {
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               <Link
-                href="/patterns"
+                href="/rendering"
                 className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
               >
-                Patterns
+                Rendering
               </Link>
             </div>
           </div>
