@@ -60,10 +60,10 @@ export default async function ISRTimedPage() {
           Note: The post's order does not update every 60 seconds unless the
           'Cycle Posts' button is used from{" "}
           <Link
-            href="/pattern3"
+            href="/rendering/isr/on-demand"
             className="text-primary underline hover:text-blue-500"
           >
-            Pattern #3
+            ISR - On Demand
           </Link>
           . If the button is used between the 60 second refreshes of this page,
           then the order changes will be reflected here on a refresh once the
