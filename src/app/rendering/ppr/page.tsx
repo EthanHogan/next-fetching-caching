@@ -1,15 +1,15 @@
 import { Suspense } from "react";
-import StreamedPostsSlow from "./_components/StreamedPostsSlow";
-import StreamedPostsSlower from "./_components/StreamedPostsSlower";
 import TimeView from "./_components/TimeView";
-import getPosts from "~/app/posts/_actions/getPosts";
 import Link from "next/link";
-import { unstable_cache } from "next/cache";
+import PrerenderedPosts from "./_components/PrefetchedPosts";
+import StreamedPostsSlow from "~/components/StreamedPostsSlow";
+import StreamedPostsSlower from "~/components/StreamedPostsSlower";
 
 export const experimental_ppr = true;
 
 export default function PPRPage() {
   console.log("rendering PPRPage");
+
   return (
     <div className="flex flex-col gap-5">
       <div>
@@ -96,34 +96,6 @@ const StreamingFallback = ({ delaySeconds }: { delaySeconds: number }) => {
       style={{ height: "150px" }}
     >
       <h2 className="text-2xl">Streaming... ({delaySeconds} second delay)</h2>
-    </div>
-  );
-};
-
-const getCachedPosts = unstable_cache(async () => {
-  "use server";
-  return await getPosts();
-});
-
-const PrerenderedPosts = async () => {
-  const posts = await getCachedPosts();
-
-  // wait 2 seconds to simulate a slow response
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-
-  console.log("rendering PrerenderedPosts");
-
-  return (
-    <div
-      className="rounded-lg border border-slate-600 p-5"
-      style={{ height: "150px" }}
-    >
-      <h2 className="text-2xl">Prerendered Posts</h2>
-      <ul className="list-inside list-disc pl-5">
-        {posts.map((post) => (
-          <li key={post.id}>{post.content}</li>
-        ))}
-      </ul>
     </div>
   );
 };

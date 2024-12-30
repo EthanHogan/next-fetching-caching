@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import StreamedPostsSlow from "./_components/StreamedPostsSlow";
-import StreamedPostsSlower from "./_components/StreamedPostsSlower";
+import StreamedPostsSlow from "~/components/StreamedPostsSlow";
+import StreamedPostsSlower from "~/components/StreamedPostsSlower";
 
 export default function StreamingPage() {
   const renderedTime = new Date().toLocaleString();
