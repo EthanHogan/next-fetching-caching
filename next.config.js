@@ -12,6 +12,9 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {
+    ppr: "incremental",
+  },
 };
 
 export default config;
