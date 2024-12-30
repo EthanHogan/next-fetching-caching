@@ -64,6 +64,7 @@ export default function PPRPage() {
         <Link
           href="/rendering/streaming"
           className="text-primary underline hover:text-blue-500"
+          prefetch={false}
         >
           Streaming
         </Link>{" "}
