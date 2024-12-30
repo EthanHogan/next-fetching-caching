@@ -1,4 +1,5 @@
 export default function StaticRenderingWithoutDataPage() {
+  console.log("Render: StaticRenderingWithoutDataPage");
   const renderedTime = new Date().toLocaleString();
   return (
     <div className="flex flex-col gap-5">

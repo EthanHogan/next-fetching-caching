@@ -3,6 +3,8 @@ import getPosts from "~/app/posts/_actions/getPosts";
 export default async function StaticRenderingWithDataPage() {
   const posts = await getPosts();
   const renderedTime = new Date().toLocaleString();
+
+  console.log("Render: StaticRenderingWithDataPage");
   return (
     <div className="flex flex-col gap-5">
       <h1 className="break-words text-5xl font-bold">
