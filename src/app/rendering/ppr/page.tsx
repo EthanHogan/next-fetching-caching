@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import StreamedPostsSlow from "../streaming/_components/StreamedPostsSlow";
-import StreamedPostsSlower from "../streaming/_components/StreamedPostsSlower";
+import StreamedPostsSlow from "./_components/StreamedPostsSlow";
+import StreamedPostsSlower from "./_components/StreamedPostsSlower";
 import TimeView from "./_components/TimeView";
 import getPosts from "~/app/posts/_actions/getPosts";
 import Link from "next/link";
