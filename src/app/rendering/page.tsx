@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function RenderingPage() {
+  console.log("rendering RenderingPage");
   return (
     <div className="container flex flex-col gap-5">
       <h1 className="text-5xl font-bold">Rendering</h1>
@@ -9,7 +10,9 @@ export default function RenderingPage() {
 
       <ul className="flex list-inside flex-col gap-5 pl-5">
         <li>
-          <h3 className="break-words text-xl font-bold">Static Rendering</h3>
+          <h3 className="break-words text-xl font-bold">
+            Static Rendering (aka Prerendering)
+          </h3>
           <ul className="list-inside list-disc pl-5">
             <li>
               <Link
@@ -91,6 +94,21 @@ export default function RenderingPage() {
                 className="text-primary underline hover:text-blue-500"
               >
                 Streaming
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3 className="break-words text-xl font-bold">
+            Partial Prerendering (PPR)
+          </h3>
+          <ul className="list-inside list-disc pl-5">
+            <li>
+              <Link
+                href="/rendering/ppr"
+                className="text-primary underline hover:text-blue-500"
+              >
+                PPR
               </Link>
             </li>
           </ul>

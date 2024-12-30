@@ -43,12 +43,12 @@ export default function StreamingPage() {
 
       <p>
         The key parts of this page are the Suspense boundaries with their own
-        fallbacks and the `unstable_noStore` in the `StreamedPosts` component.
+        fallbacks and the `connection()` call in the `StreamedPosts` component.
       </p>
 
       <p>
-        Removing `unstable_noStore` will cause the entire page to become static
-        and you will not see the streaming effect occur on the posts because the
+        Removing `connection()` will cause the entire page to become static and
+        you will not see the streaming effect occur on the posts because the
         page will be statically generated at build time and cached. The
         "rendered time" will also not update on each request.
       </p>
