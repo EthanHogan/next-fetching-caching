@@ -8,11 +8,15 @@ import getPosts from "~/app/posts/_actions/getPosts";
 // });
 
 export default async function PrerenderedPosts() {
-  await connection();
+  // there doesnt seem a way to use this right now without getting
+  // errors once the initial data changes. The only way to get this
+  // to work is to use the connection() function and then have the
+  // page wrap the component in a <Suspense> component, but this
+  // makes the posts NOT prerendered.
   const posts = await getPosts();
 
   // wait 2 seconds to simulate a slow response
-  //   await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   console.log("rendering PrerenderedPosts");
 

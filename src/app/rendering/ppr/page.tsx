@@ -39,9 +39,7 @@ export default function PPRPage() {
       </div>
 
       <div>
-        <Suspense fallback={<StreamingFallback delaySeconds={0} />}>
-          <PrerenderedPosts />
-        </Suspense>
+        <PrerenderedPosts />
       </div>
 
       <div className="grid grid-cols-2 gap-3">
