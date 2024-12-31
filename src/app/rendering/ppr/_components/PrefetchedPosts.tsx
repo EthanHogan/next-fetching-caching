@@ -10,7 +10,7 @@ export default async function PrerenderedPosts() {
   const posts = await getPosts();
 
   // wait 2 seconds to simulate a slow response
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  //   await new Promise((resolve) => setTimeout(resolve, 2000));
 
   console.log("rendering PrerenderedPosts");
 
