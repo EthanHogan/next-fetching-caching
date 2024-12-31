@@ -1,4 +1,5 @@
 // import { unstable_cache } from "next/cache";
+import { connection } from "next/server";
 import getPosts from "~/app/posts/_actions/getPosts";
 
 // const getCachedPosts = unstable_cache(async () => {
@@ -7,6 +8,7 @@ import getPosts from "~/app/posts/_actions/getPosts";
 // });
 
 export default async function PrerenderedPosts() {
+  await connection();
   const posts = await getPosts();
 
   // wait 2 seconds to simulate a slow response
