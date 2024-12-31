@@ -16,10 +16,6 @@ export default function PPRPage() {
         <em>Partial Prerendering</em>
       </div>
 
-      {/* <div>
-        <TimeView />
-      </div> */}
-
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
           <div className="h-5 w-5 rounded border border-slate-600"></div>
@@ -52,9 +48,9 @@ export default function PPRPage() {
       </div>
 
       <p>
-        The key parts of this page are the `const experimental_ppr = true`,
-        Suspense boundaries with their own fallbacks, and the `connection()`
-        call in the `StreamedPosts` component.
+        The key parts of this page are the `const experimental_ppr = true` in
+        the page.tsx, the Suspense boundaries with their own fallbacks, and the
+        `connection()` call in the `StreamedPosts` component.
       </p>
 
       <p>
@@ -76,13 +72,7 @@ export default function PPRPage() {
         Removing `connection()` from the `StreamedPosts` component will cause
         the entire page to become static and you will not see the streaming
         effect occur on the posts because the page will be statically generated
-        at build time and cached. The "rendered time" will also not update on
-        each request.
-      </p>
-
-      <p>
-        To make the "Server generated" areas of the page static and always have
-        the streamed sections be fresh, see Partial Pre-Rendering (PPR).
+        at build time and cached.
       </p>
     </div>
   );
