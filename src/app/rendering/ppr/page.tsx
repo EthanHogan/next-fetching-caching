@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
-import PrerenderedPosts from "./_components/PrefetchedPosts";
+import PrerenderedPosts from "./_components/ISRPosts";
 import StreamedPostsSlow from "~/components/StreamedPostsSlow";
 import StreamedPostsSlower from "~/components/StreamedPostsSlower";
 
@@ -32,6 +32,10 @@ export default function PPRPage() {
             Streamed content that was generated on the server
           </div>
         </div>
+      </div>
+
+      <div>
+        <PrerenderedPosts />
       </div>
 
       <div className="grid grid-cols-2 gap-3">

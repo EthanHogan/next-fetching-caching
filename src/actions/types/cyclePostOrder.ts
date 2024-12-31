@@ -6,8 +6,16 @@ import getPosts from "~/app/posts/_actions/getPosts";
 import { db } from "~/server/db";
 import { Post, posts } from "~/server/db/schema";
 
+// store /rendering/isr/on-demand and /rendering/ppr
+const isrPostSubscribers = new Set<string>([
+  "/rendering/isr/on-demand",
+  "/rendering/ppr",
+]);
+
 function revalidatePaths() {
-  revalidatePath("/rendering/isr/on-demand");
+  for (const path of isrPostSubscribers) {
+    revalidatePath(path);
+  }
 }
 
 export default async function cyclePostsOrder() {

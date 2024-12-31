@@ -7,7 +7,7 @@ import getPosts from "~/app/posts/_actions/getPosts";
 //   return await getPosts();
 // });
 
-export default async function PrerenderedPosts() {
+export default async function ISRPosts() {
   // there doesnt seem a way to use this right now without getting
   // errors once the initial data changes. The only way to get this
   // to work is to use the connection() function and then have the
@@ -25,7 +25,7 @@ export default async function PrerenderedPosts() {
       className="rounded-lg border border-slate-600 p-5"
       style={{ height: "150px" }}
     >
-      <h2 className="text-2xl">Prerendered Posts</h2>
+      <h2 className="text-2xl">ISR Posts</h2>
       <ul className="list-inside list-disc pl-5">
         {posts.map((post) => (
           <li key={post.id}>{post.content}</li>
