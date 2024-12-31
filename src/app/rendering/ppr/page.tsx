@@ -3,7 +3,6 @@ import Link from "next/link";
 import PrerenderedPosts from "./_components/PrefetchedPosts";
 import StreamedPostsSlow from "~/components/StreamedPostsSlow";
 import StreamedPostsSlower from "~/components/StreamedPostsSlower";
-import TimeView from "./_components/TimeView";
 
 export const experimental_ppr = true;
 
@@ -39,9 +38,9 @@ export default function PPRPage() {
         </div>
       </div>
 
-      {/* <div>
+      <div>
         <PrerenderedPosts />
-      </div> */}
+      </div>
 
       <div className="grid grid-cols-2 gap-3">
         <Suspense fallback={<StreamingFallback delaySeconds={3} />}>

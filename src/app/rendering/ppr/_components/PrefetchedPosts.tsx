@@ -1,15 +1,13 @@
-"use server";
-
-import { unstable_cache } from "next/cache";
+// import { unstable_cache } from "next/cache";
 import getPosts from "~/app/posts/_actions/getPosts";
 
-const getCachedPosts = unstable_cache(async () => {
-  "use server";
-  return await getPosts();
-});
+// const getCachedPosts = unstable_cache(async () => {
+//   "use server";
+//   return await getPosts();
+// });
 
 export default async function PrerenderedPosts() {
-  const posts = await getCachedPosts();
+  const posts = await getPosts();
 
   // wait 2 seconds to simulate a slow response
   await new Promise((resolve) => setTimeout(resolve, 2000));
