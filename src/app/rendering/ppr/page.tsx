@@ -17,9 +17,9 @@ export default function PPRPage() {
         <em>Partial Prerendering</em>
       </div>
 
-      <div>
+      {/* <div>
         <TimeView />
-      </div>
+      </div> */}
 
       <div className="flex flex-col gap-3">
         <div className="flex items-center gap-3">
