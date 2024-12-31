@@ -3,6 +3,7 @@ import Link from "next/link";
 import PrerenderedPosts from "./_components/PrefetchedPosts";
 import StreamedPostsSlow from "~/components/StreamedPostsSlow";
 import StreamedPostsSlower from "~/components/StreamedPostsSlower";
+import TimeView from "./_components/TimeView";
 
 export const experimental_ppr = true;
 
@@ -14,6 +15,10 @@ export default function PPRPage() {
       <div>
         <h1 className="text-5xl font-bold">PPR</h1>
         <em>Partial Prerendering</em>
+      </div>
+
+      <div>
+        <TimeView />
       </div>
 
       <div className="flex flex-col gap-3">
