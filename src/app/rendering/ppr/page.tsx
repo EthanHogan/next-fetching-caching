@@ -1,5 +1,4 @@
 import { Suspense } from "react";
-import TimeView from "./_components/TimeView";
 import Link from "next/link";
 import PrerenderedPosts from "./_components/PrefetchedPosts";
 import StreamedPostsSlow from "~/components/StreamedPostsSlow";
