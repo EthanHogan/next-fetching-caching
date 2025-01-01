@@ -50,12 +50,13 @@ export default function StreamingPage() {
         Removing `connection()` will cause the entire page to become static and
         you will not see the streaming effect occur on the posts because the
         page will be statically generated at build time and cached. The
-        "rendered time" will also not update on each request.
+        &quot;rendered time&quot; will also not update on each request.
       </p>
 
       <p>
-        To make the "Server generated" areas of the page static and always have
-        the streamed sections be fresh, see Partial Pre-Rendering (PPR).
+        To make the &quot;Server generated&quot; areas of the page static and
+        always have the streamed sections be fresh, see Partial Pre-Rendering
+        (PPR).
       </p>
     </div>
   );

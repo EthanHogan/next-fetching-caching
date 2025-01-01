@@ -1,18 +1,8 @@
 // import { unstable_cache } from "next/cache";
-import { connection } from "next/server";
 import getPosts from "~/app/posts/_actions/getPosts";
 
-// const getCachedPosts = unstable_cache(async () => {
-//   "use server";
-//   return await getPosts();
-// });
-
 export default async function ISRPosts() {
-  // there doesnt seem a way to use this right now without getting
-  // errors once the initial data changes. The only way to get this
-  // to work is to use the connection() function and then have the
-  // page wrap the component in a <Suspense> component, but this
-  // makes the posts NOT prerendered.
+  // this only works because we are invalidating the route this is used on each time posts change
   const posts = await getPosts();
 
   // wait 2 seconds to simulate a slow response

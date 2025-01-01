@@ -1,10 +1,10 @@
 "use server";
 
-import { inArray, sql, SQL } from "drizzle-orm";
+import { inArray, sql, type SQL } from "drizzle-orm";
 import { revalidatePath } from "next/cache";
 import getPosts from "~/app/posts/_actions/getPosts";
 import { db } from "~/server/db";
-import { Post, posts } from "~/server/db/schema";
+import { type Post, posts } from "~/server/db/schema";
 
 // store /rendering/isr/on-demand and /rendering/ppr
 const isrPostSubscribers = new Set<string>([

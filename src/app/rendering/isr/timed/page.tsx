@@ -36,9 +36,9 @@ export default async function ISRTimedPage() {
         <li>✅ Data fetched</li>
         <li>✅ Data mutations</li>
         <li>
-          ➖ Data cached - Sort of. The 'data' it self is not cached, but the
-          page that renders the data is cached, having the same effect on the
-          user's experience of the page
+          ➖ Data cached - Sort of. The &apos;data&apos; it self is not cached,
+          but the page that renders the data is cached, having the same effect
+          on the user&apos;s experience of the page
         </li>
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
@@ -57,8 +57,8 @@ export default async function ISRTimedPage() {
           ))}
         </ul>
         <p className="text-xs">
-          Note: The post's order does not update every 60 seconds unless the
-          'Cycle Posts' button is used from{" "}
+          Note: The post&apos;s order does not update every 60 seconds unless
+          the &apos;Cycle Posts&apos; button is used from{" "}
           <Link
             href="/rendering/isr/on-demand"
             className="text-primary underline hover:text-blue-500"
@@ -99,8 +99,8 @@ export default async function ISRTimedPage() {
         <li>
           Any requests for this page between <RenderTime /> and{" "}
           <ExpirationTime /> will continue to be served this exact page,
-          regardless of any changes to to the post's ordering (triggered by the
-          'Cycle Posts' button on{" "}
+          regardless of any changes to to the post&apos;s ordering (triggered by
+          the &apos;Cycle Posts&apos; button on{" "}
           <Link
             href="/rendering/isr/on-demand"
             className="text-primary underline hover:text-blue-500"

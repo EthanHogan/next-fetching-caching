@@ -6,6 +6,6 @@ export default async function getTime() {
       resolve(new Date().toLocaleString());
     }, 0);
   });
-  // return time as string;
-  return "hello";
+
+  return time;
 }

@@ -19,9 +19,9 @@ export default async function StaticRenderingWithDataPage() {
         <li>✅ Data fetched</li>
         <li>❌ Data mutations</li>
         <li>
-          ➖ Data cached - Sort of. The 'data' it self is not cached, but the
-          page that renders the data is cached, having the same effect on the
-          user's experience of the page
+          ➖ Data cached - Sort of. The &apos;data&apos; it self is not cached,
+          but the page that renders the data is cached, having the same effect
+          on the user&apos;s experience of the page
         </li>
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>
@@ -30,7 +30,7 @@ export default async function StaticRenderingWithDataPage() {
 
       <div className="rounded-lg border border-slate-700 p-5">
         <h2 className="text-2xl">
-          'Posts' fetched on server at{" "}
+          &apos;Posts&apos; fetched on server at{" "}
           <span className="font-bold">build time</span>:
         </h2>
         <ul className="list-inside list-disc pl-5">

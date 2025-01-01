@@ -20,9 +20,9 @@ export default async function ISROnDemandPage() {
         <li>✅ Data fetched</li>
         <li>✅ Data mutations</li>
         <li>
-          ➖ Data cached - Sort of. The 'data' it self is not cached, but the
-          page that renders the data is cached, having the same effect on the
-          user's experience of the page
+          ➖ Data cached - Sort of. The &apos;data&apos; it self is not cached,
+          but the page that renders the data is cached, having the same effect
+          on the user&apos;s experience of the page
         </li>
         <li>❌ loading.tsx</li>
         <li>❌ Error boundary</li>

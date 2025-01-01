@@ -5,7 +5,7 @@ import CyclePostsButton from "~/components/CyclePostsButton";
 export default async function DynamicRenderingSearchParamsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const sParams = await searchParams;
   console.log(sParams);
@@ -71,8 +71,8 @@ export default async function DynamicRenderingSearchParamsPage({
 
       <p>
         The page also has its own `loading.tsx` so that the page is more
-        responsive when it is navigated to. To see what happens when you don't
-        have a `loading.tsx` on a dynamic rendered page, go to{" "}
+        responsive when it is navigated to. To see what happens when you
+        don&apos;t have a `loading.tsx` on a dynamic rendered page, go to{" "}
         <Link
           href="/rendering/dynamic-no-loading-fallback"
           className="text-primary underline hover:text-blue-500"
