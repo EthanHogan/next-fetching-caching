@@ -20,6 +20,13 @@ export function TopNav() {
               >
                 Rendering
               </Link>
+
+              <Link
+                href="/rendering/streaming"
+                className="inline-flex items-center px-1 pt-1 text-sm font-medium text-primary"
+              >
+                Rendering
+              </Link>
             </div>
           </div>
           <div className="flex items-center gap-3">
