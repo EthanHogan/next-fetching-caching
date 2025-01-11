@@ -1,3 +1,5 @@
+import PageAttributes from "~/components/PageAttributes";
+
 export default function StaticRenderingWithoutDataPage() {
   console.log("Render: StaticRenderingWithoutDataPage");
   const renderedTime = new Date().toLocaleString();
@@ -7,19 +9,14 @@ export default function StaticRenderingWithoutDataPage() {
         Static Rendering - Without Data
       </h1>
 
-      <ul className="list-inside list-disc pl-5 text-sm">
-        <li>✅ Rendered on server</li>
-        <li>✅ Page rendered at build time and cached</li>
-        <li>✅ Static page cached</li>
-        <li>❌ Cached static page is invalidated on-demand</li>
-        <li>❌ Cached static page is invalidated on a timer</li>
-        <li>❌ Data fetched</li>
-        <li>❌ Data mutations</li>
-        <li>➖ Data cached - No data to cache</li>
-        <li>❌ loading.tsx</li>
-        <li>❌ Error boundary</li>
-        <li>❌ Suspense</li>
-      </ul>
+      <div>
+        <PageAttributes
+          pageRenderedOn="build"
+          dataFetchedOn="n/a"
+          dataCached="n/a"
+          dataCacheInvalidated="n/a"
+        />
+      </div>
 
       <p>
         This page is a rendered at build time on the server and cached
