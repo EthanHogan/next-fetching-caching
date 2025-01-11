@@ -25,7 +25,7 @@ export default function StaticRenderingWithoutDataPage() {
 
       <p>
         This page was rendered at:{" "}
-        <span className="font-bold">{renderedTime}</span>
+        <span className="font-bold">{renderedTime} GMT</span>
       </p>
 
       <p>Refresh the page to see if the render time updates.</p>
